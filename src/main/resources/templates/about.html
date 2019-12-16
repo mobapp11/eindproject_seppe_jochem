@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=l, shrink-to-fit=no">
     <meta charset="UTF-8">
@@ -21,29 +21,12 @@
             crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-    <meta charset="UTF-8">
-    <title>Homepage Tim & Jerry</title>
 
-    <h1>Tim & Jerry the petshop boiz</h1>
+    <meta charset="UTF-8">
 </head>
 <body>
-<nav th:replace="~{menu::nav_menu(Home)}"></nav>
+<h1>ABOUT</h1>
+<nav th:replace="~{menu::nav_menu(about)}"></nav>
 
-<div class="container-fluid">
-    <div class="productenlijst" th:each="product: ${all}">
-        <p th:text="${product.productnaam}"></p>
-        <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
-        <p th:text="'Prijs: € ' + ${product.prijs}"></p>
-        <button>Voegtoe</button>
-        <br>
-        <br>
-    </div>
-</div>
-
-
-
-
-</div>
-</body>
 </body>
 </html>

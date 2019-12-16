@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<nav th:fragment="nav_menu(page)" id="nav_menu">
+    <ul>
+        <li><a th:href="@{~/}">Home</a></li>
+        <li><a th:href="@{~/about}">About</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Categoriën</button>
+            <div class="dropdown-content">
+                <a href="#">Voeding</a>
+                <a href="#">Speelgoed</a>
+                <a href="#">Verzorging</a>
+            </div>
+        </div>
+    </ul>
+</nav>
+
+</html>
