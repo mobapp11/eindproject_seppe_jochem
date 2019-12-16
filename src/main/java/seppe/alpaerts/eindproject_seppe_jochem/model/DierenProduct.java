@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Entity
-public class Product {
+public class DierenProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -24,7 +24,7 @@ public class Product {
     @DecimalMin(value = "0.01")
     private BigDecimal prijs;
 
-    public Product() {
+    public DierenProduct() {
     }
 
     public int getId() {
