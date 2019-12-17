@@ -26,9 +26,27 @@
     <title>Winkelmandje</title>
 </head>
 <body>
-<h1>BESTELLINGEN</h1>
-<nav th:replace="~{menu::nav_menu(Bestelligen)}"></nav>
+<nav th:replace="~{menu::nav_menu(Bestellingen)}"></nav>
+<div class="container-fluid">
+<table id="bestellingTable">
+    <thead>
+    <tr>
+        <th th:text="Naam"></th>
+        <th th:text="aantal"></th>
+        <th th:text="prijs"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  th:each="product: ${all}">
+        <td th:text="${product.productnaam}"></td>
+        <td th:text="X"></td>
+        <td th:text="${product.prijs}"></td>
+        <td><button>delete</button></td>
+    </tr>
+    </tbody>
 
+</table>
+</div>
 
 </body>
 </html>
