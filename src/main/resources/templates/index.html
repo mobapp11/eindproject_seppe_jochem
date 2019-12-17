@@ -33,13 +33,13 @@
     <div class="row">
         <div class="card-body" th:each="product:${all}">
             <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://www.stagobel.be/media/catalog/product/placeholder/default/placeholder-square_1.png"
                          class="card-img-top">
                     <h3 th:text="${product.productnaam}"></h3>
                     <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
                     <p th:text="'Prijs: € ' + ${product.prijs}"></p>
-                    <a href="#" class="btn btn-primary">add to cart</a>
+                    <button type="button" class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;">Add to cart</button>
                 </div>
             </div>
 
