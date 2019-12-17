@@ -24,6 +24,7 @@
     <meta charset="UTF-8">
     <title>Homepage Tim & Jerry</title>
     <title>Winkelmandje</title>
+    <h1>Tim & Jerry the petshop boiz</h1>
 </head>
 <body>
 <nav th:replace="~{menu::nav_menu(Bestellingen)}"></nav>
@@ -37,14 +38,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="product: ${all}">
-            <td th:text="${product.productnaam}"></td>
-            <td th:text="X"></td>
-            <td th:text="${product.prijs}"></td>
-            <td>
-                <button>delete</button>
-            </td>
-        </tr>
+
         </tbody>
         <div class="container-fluid">
             <form th:action="@{~/bestellingen}" method="post" th:object="${nBestelling}">
@@ -77,7 +71,7 @@
                 <input class="btn btn-primary" type="submit">
 
             </form>
-        </
+        </div>
     </table>
 </div>
 

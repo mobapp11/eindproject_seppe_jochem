@@ -5,15 +5,16 @@
     <ul>
         <li><a th:href="@{~/}">Home</a></li>
         <li><a th:href="@{~/about}">About</a></li>
+        <li><a th:href="@{~/bestellingen}">Bestellingen</a></li>
         <div class="dropdown">
             <button class="dropbtn">Categoriën</button>
             <div class="dropdown-content">
-                <a href="#">Voeding</a>
+                <a href="@{~/voeding}">Voeding</a>
                 <a href="#">Speelgoed</a>
                 <a href="#">Verzorging</a>
             </div>
         </div>
-        <li><a th:href="@{~/bestellingen}">Bestellingen</a></li>
+
     </ul>
 </nav>
 

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import seppe.alpaerts.eindproject_seppe_jochem.model.Bestelling;
 import seppe.alpaerts.eindproject_seppe_jochem.model.BestellingDAO;
-import seppe.alpaerts.eindproject_seppe_jochem.model.DierenProduct;
 import seppe.alpaerts.eindproject_seppe_jochem.model.ProductDAO;
 
 import javax.validation.Valid;
@@ -22,13 +21,9 @@ public class BestellingController {
     ProductDAO dao;
     BestellingDAO daoBestelling;
 
-    @ModelAttribute(value = "all")
-    public Iterable<DierenProduct> getAllProducten() {
-        return dao.findAll();
-    }
 
     @ModelAttribute(value = "nBestelling")
-    public Bestelling nBestelling (){
+    public Bestelling nBestelling() {
         return new Bestelling();
     }
 
@@ -40,6 +35,11 @@ public class BestellingController {
     }
 
     @RequestMapping(value = {"/bestellingen"}, method = RequestMethod.POST)
+    public String saveBestelling(@ModelAttribute("nBestelling") @Valid Bestelling nBestelling, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
+            return "bestellingen";
+        return "redirect:/bedankt";
+    }
     public String saveBestelling(@ModelAttribute("nBestelling") @Valid Bestelling nBestelling, BindingResult bindingResult)
     {if(bindingResult.hasErrors())
         return "bestellingen";
@@ -51,4 +51,4 @@ public class BestellingController {
 
 
 
-    }
+}
