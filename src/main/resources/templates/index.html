@@ -28,15 +28,29 @@
 </head>
 <body>
 <nav th:replace="~{menu::nav_menu(Home)}"></nav>
-
+</div>
 <div class="container-fluid">
-    <div class="productenlijst" th:each="product: ${all}">
-        <p th:text="${product.productnaam}"></p>
-        <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
-        <p th:text="'Prijs: € ' + ${product.prijs}"></p>
-        <button>Voegtoe</button>
-        <br>
-        <br>
+    <div class="row">
+        <div class="card-body" th:each="product:${all}">
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.stagobel.be/media/catalog/product/placeholder/default/placeholder-square_1.png"
+                         class="card-img-top">
+                    <h3 th:text="${product.productnaam}"></h3>
+                    <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
+                    <p th:text="'Prijs: € ' + ${product.prijs}"></p>
+                    <a href="#" class="btn btn-primary">add to cart</a>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </div>
+</body>
+</html>
+
+
+
+
 
