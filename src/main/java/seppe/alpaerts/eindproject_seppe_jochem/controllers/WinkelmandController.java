@@ -12,11 +12,11 @@ import seppe.alpaerts.eindproject_seppe_jochem.model.BestellingDAO;
 public class WinkelmandController {
 
     @Autowired
-    BestellingDAO daoBestelling;
+    BestellingDAO dao;
 
     @ModelAttribute
-    @RequestMapping(value = {"", "/", "/bestellingen"}, method = RequestMethod.GET)
-    public String showIndex(ModelMap map) {
+    @RequestMapping(value = {"/bestellingen"}, method = RequestMethod.GET)
+    public String showWinkelmand(ModelMap map) {
         return "bestellingen";
     }
 
