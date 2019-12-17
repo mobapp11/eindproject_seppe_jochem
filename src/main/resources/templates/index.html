@@ -34,7 +34,7 @@
         <div class="card-body" th:each="product:${all}">
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="https://www.stagobel.be/media/catalog/product/placeholder/default/placeholder-square_1.png"
+                    <img th:src="${product.imgURL}"
                          class="card-img-top">
                     <h3 th:text="${product.productnaam}"></h3>
                     <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>

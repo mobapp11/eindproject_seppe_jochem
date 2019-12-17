@@ -24,6 +24,16 @@ public class DierenProduct {
     @DecimalMin(value = "0.01")
     private BigDecimal prijs;
 
+    private String imgURL;
+
+    public String getImgURL() {
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
+    }
+
     public DierenProduct() {
     }
 
