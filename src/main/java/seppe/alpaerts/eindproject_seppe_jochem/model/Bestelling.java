@@ -17,8 +17,6 @@ public class Bestelling {
     private String voornaam;
     @NotBlank
     private String email;
-    @NotBlank
-    private String categorie;
     private String telnr;
 
     public Bestelling() {
@@ -56,13 +54,6 @@ public class Bestelling {
         this.email = email;
     }
 
-    public String getCategorie() {
-        return categorie;
-    }
-
-    public void setCategorie(String categorie) {
-        this.categorie = categorie;
-    }
 
     public String getTelnr() {
         return telnr;

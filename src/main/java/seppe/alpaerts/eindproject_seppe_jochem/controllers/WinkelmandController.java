@@ -26,13 +26,8 @@ public class WinkelmandController {
         return dao.findAll();
     }
 
-    @ModelAttribute(value = "allBestellingen")
-    public Iterable<Bestelling> getAllBestellingen() {
-        return daoBestelling.findAll();
-    }
-
     @ModelAttribute(value = "nBestelling")
-    public Bestelling newBestelling (){
+    public Bestelling nBestelling (){
         return new Bestelling();
     }
 
@@ -43,11 +38,12 @@ public class WinkelmandController {
     }
 
     @RequestMapping(value = {"/bestellingen"}, method = RequestMethod.POST)
-    public String saveBestelling(@ModelAttribute("nBestelling")@Valid Bestelling nBestelling, BindingResult bindingResult){
-        if (bindingResult.hasErrors())
-            return "bestellingen";
-        daoBestelling.save(nBestelling);
-        return "redirect:/index";}
+    public String saveBestelling(@ModelAttribute("nBestelling") @Valid Bestelling nBestelling, BindingResult bindingResult)
+    {if(bindingResult.hasErrors())
+        return "bestellingen";
+    daoBestelling.save(nBestelling);
+    return "redirect:/index";}
+
 
 
 
