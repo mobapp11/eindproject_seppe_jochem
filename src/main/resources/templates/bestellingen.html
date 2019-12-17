@@ -28,47 +28,57 @@
 <body>
 <nav th:replace="~{menu::nav_menu(Bestellingen)}"></nav>
 <div class="container-fluid">
-<table id="bestellingTable">
-    <thead>
-    <tr>
-        <th th:text="Naam"></th>
-        <th th:text="aantal"></th>
-        <th th:text="prijs"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr  th:each="product: ${all}">
-        <td th:text="${product.productnaam}"></td>
-        <td th:text="X"></td>
-        <td th:text="${product.prijs}"></td>
-        <td><button>delete</button></td>
-    </tr>
-    </tbody>
-    <form>
-    <div class="form-group">
+    <table id="bestellingTable">
+        <thead>
+        <tr>
+            <th th:text="Naam"></th>
+            <th th:text="aantal"></th>
+            <th th:text="prijs"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product: ${all}">
+            <td th:text="${product.productnaam}"></td>
+            <td th:text="X"></td>
+            <td th:text="${product.prijs}"></td>
+            <td>
+                <button>delete</button>
+            </td>
+        </tr>
+        </tbody>
+        <div class="container-fluid">
+            <form th:action="@{~/bestellingen}" method="post" th:object="${nBestelling}">
 
-    </div>
-    <div class="form-group">
-        <label  th:text="voornaam"></label>
+                <div class="form-group">
+                    <label for="naam">Naam</label>
+                    <input class="form-control" type="text" th:field="*{naam}" id="naam">
+                    <span th:if="${#fields.hasErrors('naam')}" th:errors="*{naam}" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="voornaam">Voornaam</label>
+                    <input class="form-control" type="text" th:field="*{voornaam}" id="voornaam">
+                    <span th:if="${#fields.hasErrors('voornaam')}" th:errors="*{voornaam}" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input class="form-control" type="text" th:field="*{email}" id="email">
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="adres">Adres</label>
+                    <input class="form-control" type="text" th:field="*{adres}" id="adres">
+                    <span th:if="${#fields.hasErrors('adres')}" th:errors="*{adres}" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="telnr">Telefoon nummer</label>
+                    <input class="form-control" type="text" th:field="*{telnr}" id="telnr">
+                    <span th:if="${#fields.hasErrors('telnr')}" th:errors="*{telnr}" class="error"></span>
+                </div>
+                <input class="btn btn-primary" type="submit">
 
-    </div>
-
-    <div class="form-group">
-        <label  th:text="email"></label>
-
-    </div>
-
-    <div class="form-group">
-        <label  th:text="adres"></label>
-    </div>
-
-    <div class="form-group">
-        <label  th:text="telefoon"></label>
-    </div>
-    <button>Bestel</button>
-    </form>
-
-</table>
+            </form>
+        </
+    </table>
 </div>
 
 </body>

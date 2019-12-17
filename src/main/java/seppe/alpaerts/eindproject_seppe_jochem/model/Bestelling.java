@@ -17,9 +17,19 @@ public class Bestelling {
     private String voornaam;
     @NotBlank
     private String email;
+    @NotBlank
+    private String adres;
     private String telnr;
 
     public Bestelling() {
+    }
+
+    public String getAdres() {
+        return adres;
+    }
+
+    public void setAdres(String adres) {
+        this.adres = adres;
     }
 
     public int getId() {
