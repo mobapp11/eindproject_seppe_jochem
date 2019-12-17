@@ -40,15 +40,6 @@ public class BestellingController {
             return "bestellingen";
         return "redirect:/bedankt";
     }
-    public String saveBestelling(@ModelAttribute("nBestelling") @Valid Bestelling nBestelling, BindingResult bindingResult)
-    {if(bindingResult.hasErrors())
-        return "bestellingen";
-    return "redirect:/index";}
 
 
-
-
-
-
-
-}
+    }

@@ -22,8 +22,7 @@ public class ProductFilerController {
 
     @RequestMapping(value= "/productfilter/{product}", method = RequestMethod.GET)
     public String showFilterProduct(ModelMap map, @PathVariable(value = "product")String product){
-        map.addAttribute("ProductCategorie", dao.findByFilterProduct(product));
+        map.addAttribute("ProductCategorie", ProductDAO.findByFilter(product));
             return "productfilter";
         }
     }
-}

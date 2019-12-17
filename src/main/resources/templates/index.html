@@ -26,9 +26,8 @@
 
     <h1>Tim & Jerry the petshop boiz</h1>
 </head>
-<body>
 <nav th:replace="~{menu::nav_menu(Home)}"></nav>
-</div>
+<body>
 <div class="container-fluid">
     <div class="row">
         <div class="card-body" th:each="product:${all}">

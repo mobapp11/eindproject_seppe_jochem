@@ -1,3 +1,5 @@
+
+
 h1 {
     background-color: #e6944a;
     color: white;
@@ -5,7 +7,6 @@ h1 {
 }
 h2{
     text-align: center;
-padding: 25px;
 }
 .row{
     padding-top: 100px;
@@ -22,8 +23,20 @@ padding: 25px;
     height: 360px;
 }
 
+.dropbtn{
+    background-color: #e6944a !important;
+    color: black !important;
+    border-style: solid !important;
+    border-color: black !important;
+
+}
+
 .btn-primary {
     alignment: bottom;
+    background-color: #e6944a !important;
+    color: black !important;
+    border-style: solid !important;
+    border-color: black !important;
 
 }
 
@@ -41,13 +54,11 @@ padding: 25px;
     margin-left: 10px;
     padding: 5px;
     text-decoration: none;
-    color: black;
-    border-style: solid;
-    border-color: black;
+    background-color: #e6944a !important;
+    color: black !important;
+    border-style: solid !important;
+    border-color: black !important;
 }
-.active{
-    background-color: aqua;
-    color: red!important ;
-}
+
 
 
