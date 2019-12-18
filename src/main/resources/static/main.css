@@ -1,3 +1,6 @@
+h2{
+    padding: 35px;
+}
 
 nav{
     width: 100%;
@@ -19,10 +22,9 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    font-family: Arial;
     color: beige;
     font-size: 14px;
-    padding: 15px 10px;
+    padding:18px 10px;
     text-decoration: none !important;
     list-style: none;
 
@@ -36,6 +38,7 @@ nav ul li ul {
     padding: 10px;
 }
 nav ul li:hover ul{
+    padding-top: 0px;
     display: block;
 }
 nav ul li ul li {
@@ -51,16 +54,31 @@ nav ul li ul li a {
     width: 100%;
     padding-top: 170px;
 }
-
+h3{
+    font-size: small;
+}
 .card {
-    width: 360px;
-    height: 700px;
+    display: flex;
+    margin: 5%;
+    padding: 5%;
+    font-size: 12px;
+    width: 260px;
+    height: 600px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-    width: 360px;
-    height: 360px;
+  padding: 10px;
+    width: 240px;
+    height: 240px;
+}
+.prijstag{
+    font-weight: bolder ;
+    font-size: large;
+    position: absolute;
+    bottom: 55px;
+    left: 10px;
+
 }
 
 .btn-primary {
