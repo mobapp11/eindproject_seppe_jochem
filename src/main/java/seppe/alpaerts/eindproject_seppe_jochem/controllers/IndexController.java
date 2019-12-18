@@ -12,6 +12,7 @@ import seppe.alpaerts.eindproject_seppe_jochem.model.ProductDAO;
 @Controller
 public class IndexController {
 
+
     @Autowired
     ProductDAO dao;
 
