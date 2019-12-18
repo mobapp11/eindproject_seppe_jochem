@@ -4,7 +4,9 @@ public class Rij  {
    private DierenProduct dierenProduct;
    private int aantal;
 
-    public Rij() {
+    public Rij(DierenProduct dierenProduct, int aantal) {
+        this.dierenProduct = dierenProduct;
+        this.aantal = aantal;
     }
 
     public DierenProduct getDierenProduct() {
