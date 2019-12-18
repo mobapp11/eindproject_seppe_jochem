@@ -36,7 +36,12 @@
             <th th:text="prijs"></th>
         </tr>
         </thead>
-        <tbody>
+        <tbody th:each="dProduct : ${alleRijen}" class="row" >
+        <tr>
+            <td th:text="*{dProduct.dierenProduct.getProductnaam()}"></td>
+            <td th:text="*{dProduct.getAantal()}"></td>
+            <td th:text="*{dProduct.dierenProduct.getPrijs()}"></td>
+        </tr>
 
         </tbody>
     </table>
