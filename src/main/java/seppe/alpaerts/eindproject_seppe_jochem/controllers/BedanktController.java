@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import seppe.alpaerts.eindproject_seppe_jochem.model.ProductDAO;
 
 @Controller
-public class controllerBedankt {
+public class BedanktController {
     @Autowired
     ProductDAO dao;
 

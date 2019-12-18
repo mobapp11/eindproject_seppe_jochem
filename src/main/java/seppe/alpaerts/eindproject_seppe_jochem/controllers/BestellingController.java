@@ -4,13 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import seppe.alpaerts.eindproject_seppe_jochem.model.Bestelling;
-import seppe.alpaerts.eindproject_seppe_jochem.model.BestellingDAO;
-import seppe.alpaerts.eindproject_seppe_jochem.model.ProductDAO;
+import org.springframework.web.bind.annotation.*;
+import seppe.alpaerts.eindproject_seppe_jochem.model.*;
 
 import javax.validation.Valid;
 
@@ -27,11 +22,26 @@ public class BestellingController {
         return new Bestelling();
     }
 
-
     @ModelAttribute
     @RequestMapping(value = {"/bestellingen"}, method = RequestMethod.GET)
-    public String showWinkelmand(ModelMap map) {
+    public String showWinkelmandje(ModelMap map) {
         return "bestellingen";
+    }
+
+    @GetMapping(value = "/bestellingen/add/{id}")
+    public String addToWinkelmandje (@PathVariable(value = "id")int id){
+        DierenProduct dProduct= dao.findById(id).get();
+        Winkelmandje.addToWinkelmandje(dProduct);
+        return "redirect:/index";
+
+    }
+
+    @GetMapping(value = "/bestellingen/remove/{id}")
+    public String removeFromWinkelmandje (@PathVariable(value = "id")int id){
+        DierenProduct dProduct= dao.findById(id).get();
+        Winkelmandje.removeFromWinkelmandje(dProduct);
+        return "redirect:/bestellingen";
+
     }
 
     @RequestMapping(value = {"/bestellingen"}, method = RequestMethod.POST)
