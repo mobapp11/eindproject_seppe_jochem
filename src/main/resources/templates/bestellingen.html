@@ -39,7 +39,10 @@
         <tbody>
 
         </tbody>
-        <div class="container-fluid">
+    </table>
+    <div class="container-fluid">
+        <div class="klantgegevens">
+
             <form th:action="@{~/bestellingen}" method="post" th:object="${nBestelling}">
 
                 <div class="form-group">
@@ -47,32 +50,39 @@
                     <input class="form-control" type="text" th:field="*{naam}" id="naam">
                     <span th:if="${#fields.hasErrors('naam')}" th:errors="*{naam}" class="error"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="voornaam">Voornaam</label>
                     <input class="form-control" type="text" th:field="*{voornaam}" id="voornaam">
                     <span th:if="${#fields.hasErrors('voornaam')}" th:errors="*{voornaam}" class="error"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input class="form-control" type="text" th:field="*{email}" id="email">
                     <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="adres">Adres</label>
                     <input class="form-control" type="text" th:field="*{adres}" id="adres">
                     <span th:if="${#fields.hasErrors('adres')}" th:errors="*{adres}" class="error"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="telnr">Telefoon nummer</label>
                     <input class="form-control" type="text" th:field="*{telnr}" id="telnr">
                     <span th:if="${#fields.hasErrors('telnr')}" th:errors="*{telnr}" class="error"></span>
                 </div>
-                <input class="btn btn-primary" type="submit">
+
+                <input class="btn btn-primary" value="Plaats je bestelling" type="submit">
 
             </form>
         </div>
-    </table>
+    </div>
 </div>
-
+<div class="footer">
+    <p5> &copy; Tim & Jerry</p5>
+</div>
 </body>
 </html>

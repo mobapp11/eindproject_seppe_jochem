@@ -1,8 +1,14 @@
-h2{
-    padding: 35px;
+h2 {
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 100px;
+
+
 }
 
-nav{
+nav {
+    z-index: 35;
+    position: fixed;
     width: 100%;
     height: 60px;
     background-color: #e6944a;
@@ -17,6 +23,7 @@ nav ul li {
     list-style: none;
     text-decoration: none;
     position: relative;
+    color: black;
 }
 
 
@@ -24,7 +31,7 @@ nav ul li a {
     display: block;
     color: beige;
     font-size: 14px;
-    padding:18px 10px;
+    padding: 18px 10px;
     text-decoration: none !important;
     list-style: none;
 
@@ -37,59 +44,103 @@ nav ul li ul {
     background-color: #e6944a !important;
     padding: 10px;
 }
-nav ul li:hover ul{
+
+nav ul li:hover ul {
     padding-top: 0px;
     display: block;
 }
+
 nav ul li ul li {
     width: 90px;
 }
+
 nav ul li ul li a {
     float: left;
     list-style: none;
     text-decoration: none;
     position: relative;
 }
+
 .row {
-    width: 100%;
-    padding-top: 170px;
+    width: 95%;
+    padding-left: 5%;
+    padding-top: 210px;
+    text-align: left;
 }
-h3{
-    font-size: small;
+
+h3 {
+    font-size: 16px !important;
+    font-weight: bolder;
+    font-style: oblique;
+    text-align: center;
+    text-underline: black !important;
+    color: #291407;
+
 }
+
+.card-body {
+
+}
+
 .card {
     display: flex;
     margin: 5%;
     padding: 5%;
     font-size: 12px;
     width: 260px;
-    height: 600px;
+    height: 400px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-  padding: 10px;
-    width: 240px;
-    height: 240px;
+    padding: 10px;
+    width: 140px;
+    height: 140px;
 }
-.prijstag{
-    font-weight: bolder ;
+
+.scrollable {
+    overflow-y: auto;
+    max-height: 110px;
+    height: 110px;
+}
+
+.prijstag {
+    font-weight: bolder;
     font-size: large;
     position: absolute;
     bottom: 55px;
-    left: 10px;
+    left: 15px;
 
 }
 
 .btn-primary {
     alignment: bottom;
     background-color: #e6944a !important;
-    color: black !important;
+    color: white !important;
     border-style: solid !important;
     border-color: black !important;
 
 }
 
+.btn-primary:hover {
+    background-color: #e67d1d !important;
+}
 
+.klantgegevens {
+    margin-top: 50px;
+    width: 500px;
+    margin-left: 25px;
+}
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    background-color: #e6944a;
+    color: white;
+    text-align: center;
+    font-size: small;
+}
 
