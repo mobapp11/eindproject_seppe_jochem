@@ -22,9 +22,9 @@ public class BestellingController {
         return new Bestelling();
     }
 
-    @ModelAttribute
-    @RequestMapping(value = {"/bestellingen"}, method = RequestMethod.GET)
-    public String showWinkelmandje(ModelMap map) {
+    @GetMapping(value = "/bestellingen")
+    public String showWinkelmandje(ModelMap map){
+        map.addAttribute("alleRijen", Winkelmandje.getWinkelmandje());
         return "bestellingen";
     }
 

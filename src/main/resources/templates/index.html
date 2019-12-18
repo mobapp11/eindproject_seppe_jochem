@@ -40,7 +40,7 @@
                 <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
                 <p class="prijstag" th:text="'Prijs: € ' + ${product.prijs}"></p>
                 <button type="button" class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;">
-                    Add to cart
+                    Add to cart<a th:href="@{/bestellingen/add/{id}(id = ${product.id})}"></a>
                 </button>
             </div>
         </div>

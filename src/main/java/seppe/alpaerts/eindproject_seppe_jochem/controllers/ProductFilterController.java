@@ -11,7 +11,7 @@ import seppe.alpaerts.eindproject_seppe_jochem.model.DierenProduct;
 import seppe.alpaerts.eindproject_seppe_jochem.model.ProductDAO;
 
 @Controller
-public class ProductFilerController {
+public class ProductFilterController {
     @Autowired
     ProductDAO dao;
 
