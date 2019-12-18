@@ -36,7 +36,7 @@ public class BestellingController {
 
     }
 
-    @GetMapping(value = "/bestellingen/remove/{id}")
+    @RequestMapping(value = "/bestellingen/remove/{id}")
     public String removeFromWinkelmandje (@PathVariable(value = "id")int id){
         DierenProduct dProduct= dao.findById(id).get();
         Winkelmandje.removeFromWinkelmandje(dProduct);
