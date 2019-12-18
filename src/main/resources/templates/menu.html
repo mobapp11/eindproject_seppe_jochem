@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+
 <nav th:fragment="nav_menu(page)" id="nav_menu">
     <ul>
         <li><a th:href="@{~/}">Home</a></li>
         <li><a th:href="@{~/about}">About</a></li>
         <li><a th:href="@{~/bestellingen}">Bestellingen</a></li>
-
-            <button class="dropbtn">Categoriën</button>
-        <div class="dropdown">
-            <div class="dropdown-content">
-                <a href="@{~/index/voeding}">Voeding</a>
-                <a href="#">Speelgoed</a>
-                <a href="#">Verzorging</a>
-            </div>
-        </div>
-
+        <li><a th:href="@{~/categorien}"> Categoriën</a>
+            <ul>
+                <li><a href="@{~/index/voeding}">Voeding</a></li>
+                <li><a href="#">Speelgoed</a></li>
+                <li><a href="#">Verzorging</a></li>
+            </ul>
+        </li>
     </ul>
 </nav>
 
