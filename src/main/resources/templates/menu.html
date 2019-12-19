@@ -2,11 +2,11 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet" type="text/css" href="main.css">
-
-
+<div class="container-fluid">
 <nav th:fragment="nav_menu(page)" id="nav_menu">
+
     <ul>
-        <li><a th:href="@{~/}">Home</a></li>
+        <li><a th:href="@{~/}"><img class="toplogo" th:src="@{~/media/tntlogo.jpg}"></a></li>
         <li><a th:href="@{~/about}">About</a></li>
         <li><a th:href="@{~/bestellingen}">Bestellingen</a></li>
         <li><a th:href="@{~/}"> Categoriën</a>
@@ -18,5 +18,6 @@
         </li>
     </ul>
 </nav>
+</div>
 
 </html>

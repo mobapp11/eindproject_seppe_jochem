@@ -28,72 +28,86 @@
 <body>
 
 <nav th:replace="~{menu::nav_menu(Bestellingen)}"></nav>
-
-<div class="container-fluid">
-    <div class="bestellingpagina">
-    <table id="bestellingTable" class="table">
-        <thead>
-        <tr>
-            <th scope=col th:text="Naam"></th>
-            <th scope=col th:text="aantal"></th>
-            <th scope=col th:text="prijs"></th>
-            <th scope=col></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="dProduct : ${alleRijen}">
-
-            <td th:text="*{dProduct.dierenProduct.getProductnaam()}"></td>
-            <td th:text="*{dProduct.getAantal()}"></td>
-            <td th:text="*{dProduct.dierenProduct.getPrijs()}"></td>
-            <td><a th:href="@{~/bestellingen/remove/{id}(id = ${dProduct.dierenProduct.id})}">Delete</a></td>
-        </tr>
-        <tr>
-            <td th:text="Totaal"></td>
-            <td></td>
-            <td th:text="*{totaalprijs}"></td>
-            <td></td>
-        </tr>
-
-        </tbody>
-    </table>
+<div class="formplustable">
     <div class="container-fluid">
-        <form th:action="@{~/bestellingen}" method="post" th:object="${nBestelling}">
 
-            <div class="form-group">
-                <label for="naam">Naam</label>
-                <input class="form-control" type="text" th:field="*{naam}" id="naam">
-                <span th:if="${#fields.hasErrors('naam')}" th:errors="*{naam}" class="error"></span>
-            </div>
-            <div class="form-group">
-                <label for="voornaam">Voornaam</label>
-                <input class="form-control" type="text" th:field="*{voornaam}" id="voornaam">
-                <span th:if="${#fields.hasErrors('voornaam')}" th:errors="*{voornaam}" class="error"></span>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input class="form-control" type="text" th:field="*{email}" id="email">
-                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></span>
-            </div>
-            <div class="form-group">
-                <label for="adres">Adres</label>
-                <input class="form-control" type="text" th:field="*{adres}" id="adres">
-                <span th:if="${#fields.hasErrors('adres')}" th:errors="*{adres}" class="error"></span>
-            </div>
-            <div class="form-group">
-                <label for="telnr">Telefoon nummer</label>
-                <input class="form-control" type="text" th:field="*{telnr}" id="telnr">
-                <span th:if="${#fields.hasErrors('telnr')}" th:errors="*{telnr}" class="error"></span>
-            </div>
-            <input class="btn btn-primary" type="submit">
+        <div class="bestellingpagina">
 
-        </form>
+            <table id="bestellingTable" class="table">
+
+                <thead>
+                <tr>
+                    <th scope=col th:text="Naam"></th>
+                    <th scope=col th:text="aantal"></th>
+                    <th scope=col th:text="prijs"></th>
+                    <th scope=col></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr th:each="dProduct : ${alleRijen}">
+
+                    <td th:text="*{dProduct.dierenProduct.getProductnaam()}"></td>
+                    <td th:text="*{dProduct.getAantal()}"></td>
+                    <td th:text="'€' + *{dProduct.dierenProduct.getPrijs()}"></td>
+                    <td><a th:href="@{~/bestellingen/remove/{id}(id = ${dProduct.dierenProduct.id})}">Delete</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td th:text=" 'totaalprijs: €'+ *{totaalprijs}"></td>
+                    <td></td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
     </div>
 
+    <div class="container-fluid">
+        <div class="contactgegevens">
+            <form th:action="@{~/bestellingen}" method="post" th:object="${nBestelling}">
+
+                <div class="form-group">
+                    <label for="naam">Naam</label>
+                    <input class="form-control" type="text" th:field="*{naam}" id="naam">
+                    <span th:if="${#fields.hasErrors('naam')}" th:errors="*{naam}" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="voornaam">Voornaam</label>
+                    <input class="form-control" type="text" th:field="*{voornaam}" id="voornaam">
+                    <span th:if="${#fields.hasErrors('voornaam')}" th:errors="*{voornaam}" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input class="form-control" type="text" th:field="*{email}" id="email">
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="adres">Adres</label>
+                    <input class="form-control" type="text" th:field="*{adres}" id="adres">
+                    <span th:if="${#fields.hasErrors('adres')}" th:errors="*{adres}" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telnr">Telefoon nummer</label>
+                    <input class="form-control" type="text" th:field="*{telnr}" id="telnr">
+                    <span th:if="${#fields.hasErrors('telnr')}" th:errors="*{telnr}" class="error"></span>
+                </div>
+
+                <input class="btn btn-primary bestelknop" type="submit">
+
+            </form>
+        </div>
+    </div>
 </div>
-</div>
+
 <footer>
     <p2>&copy; Time & Jerry - Seppe & Jochem</p2>
 </footer>
+
 </body>
 </html>
