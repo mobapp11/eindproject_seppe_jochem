@@ -30,9 +30,11 @@
 
 
 <nav th:replace="~{menu::nav_menu(Home)}"></nav>
+<img class="banner" th:src="@{~/media/banner.png}">
 <div class="col-xs-3">
     <div class="row">
         <div class="card-body" th:each="product:${all}">
+
             <div class="card">
                 <img th:src="${product.imgURL}"
                      class="card-img-top image-responsive">
@@ -40,8 +42,7 @@
                 <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
                 <p class="prijstag" th:text="'Prijs: € ' + ${product.prijs}"></p>
                 <a type="button" th:href="@{/bestellingen/add/{id}(id = ${product.id})}"
-                   class="align-self-end btn btn-lg btn-block btn-primary"
-                   style="margin-top: auto;"> Add to cart</a>
+                   class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;"> Add to cart</a>
 
             </div>
         </div>
@@ -49,7 +50,8 @@
     </div>
 
 </div>
-
+<footer>
+    <p2>placeholder</p2>
 </body>
 </html>
 
