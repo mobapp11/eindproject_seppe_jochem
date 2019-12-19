@@ -39,7 +39,9 @@
                 <h3 th:text="${product.productnaam}"></h3>
                 <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
                 <p class="prijstag" th:text="'Prijs: € ' + ${product.prijs}"></p>
-                <a th:href="@{/bestellingen/add/{id}(id = ${product.id})}"> Add to cart</a>
+                <a type="button" th:href="@{/bestellingen/add/{id}(id = ${product.id})}"
+                   class="align-self-end btn btn-lg btn-block btn-primary"
+                   style="margin-top: auto;"> Add to cart</a>
 
             </div>
         </div>
