@@ -30,32 +30,28 @@
 
 
 <nav th:replace="~{menu::nav_menu(Home)}"></nav>
-<div class="login-container">
-    <div class="col-xs-2">
-        <div class="row">
-            <div class="card-body" th:each="product:${all}">
-                <div class="card">
-                    <img th:src="${product.imgURL}"
-                         class="card-img-top image-responsive">
-                    <h3 th:text="${product.productnaam}"></h3>
-                    <div class="scrollable">
-                    <p class="cardProductBeschrijving" th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
-                    </div>
-                    <p class="prijstag" th:text="'Prijs: € ' + ${product.prijs}"></p>
-                    <button type="button" class="align-self-end btn btn-lg btn-block btn-primary"
-                            style="margin-top: auto;">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
+<img class="banner" th:src="@{~/media/banner.png}">
+<div class="col-xs-3">
+    <div class="row">
+        <div class="card-body" th:each="product:${all}">
 
+            <div class="card">
+                <img th:src="${product.imgURL}"
+                     class="card-img-top image-responsive">
+                <h3 th:text="${product.productnaam}"></h3>
+                <p th:text="'Beschrijving: ' + ${product.omschrijving}"></p>
+                <p class="prijstag" th:text="'Prijs: € ' + ${product.prijs}"></p>
+                <a type="button" th:href="@{/bestellingen/add/{id}(id = ${product.id})}"
+                   class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;"> Add to cart</a>
+
+            </div>
         </div>
 
     </div>
+
 </div>
-<div class="footer">
-    <p5> &copy; Tim & Jerry</p5>
-</div>
+<footer>
+    <p2>placeholder</p2>
 </body>
 </html>
 

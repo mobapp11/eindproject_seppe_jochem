@@ -9,11 +9,11 @@
         <li><a th:href="@{~/}">Home</a></li>
         <li><a th:href="@{~/about}">About</a></li>
         <li><a th:href="@{~/bestellingen}">Bestellingen</a></li>
-        <li><a th:href="@{~/categorien}"> Categoriën</a>
+        <li><a th:href="@{~/}"> Categoriën</a>
             <ul>
-                <li><a href="@{~/index/voeding}">Voeding</a></li>
-                <li><a href="#">Speelgoed</a></li>
-                <li><a href="#">Verzorging</a></li>
+                <li><a th:href="@{~/productfilter/voeding}">Voeding</a></li>
+                <li><a th:href="@{~/productfilter/speelgoed}">Speelgoed</a></li>
+                <li><a th:href="@{~/productfilter/verzorging}">Verzorging</a></li>
             </ul>
         </li>
     </ul>

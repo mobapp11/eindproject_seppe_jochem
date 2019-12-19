@@ -9,6 +9,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
+/**
+ * Author: Seppe
+ * klasse gemaakt om producten te kunnen aanmaken in database, in een tabel te zetten op indexpagina
+ **/
 @Entity
 public class DierenProduct {
     @Id
