@@ -6,6 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
+/** Author: Seppe Alpaerts
+ * Made class for bestelling, to make a form
+ */
+
 @Entity
 public class Bestelling {
     @Id

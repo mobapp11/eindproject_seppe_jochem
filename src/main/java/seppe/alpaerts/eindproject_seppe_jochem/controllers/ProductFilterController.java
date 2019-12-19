@@ -19,7 +19,7 @@ public class ProductFilterController {
     }
 
     @RequestMapping(value = "/productfilter/{categorie}", method = RequestMethod.GET)
-    public  String filter(ModelMap map, @PathVariable(value = "categorie") String product) {
+    public String filter(ModelMap map, @PathVariable(value = "categorie") String product) {
         map.addAttribute("categorie", dao.findByCategorie(product));
         return "productFilter";
 
