@@ -8,6 +8,10 @@ public class Rij  {
         this.dierenProduct = dierenProduct;
         this.aantal = aantal;
     }
+    public Rij(int aantal) {
+        this.dierenProduct = dierenProduct;
+        this.aantal++;
+    }
 
     public DierenProduct getDierenProduct() {
         return dierenProduct;

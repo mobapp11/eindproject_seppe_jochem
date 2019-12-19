@@ -43,13 +43,13 @@
             <td th:text="*{dProduct.dierenProduct.getProductnaam()}"></td>
             <td th:text="*{dProduct.getAantal()}"></td>
             <td th:text="*{dProduct.dierenProduct.getPrijs()}"></td>
-            <td><a class="deleteknop" th:href="@{/bestellingen/remove/{id}(id = ${dProduct.id})}">Delete</a></td>
+            <td><a th:href="@{~/bestellingen/remove/{id}(id = ${dProduct.dierenProduct.id})}">Delete</a></td>
         </tr>
         <tr>
             <td th:text="Totaal"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td th:text="*{totaalprijs}"></td>
+            <td ></td>
         </tr>
 
         </tbody>

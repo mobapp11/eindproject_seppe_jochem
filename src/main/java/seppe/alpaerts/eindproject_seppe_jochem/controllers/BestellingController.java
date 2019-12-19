@@ -22,9 +22,11 @@ public class BestellingController {
         return new Bestelling();
     }
 
+
     @GetMapping(value = "/bestellingen")
     public String showWinkelmandje(ModelMap map){
-        map.addAttribute("alleRijen", Winkelmandje.getWinkelmandje());
+        map.addAttribute("alleRijen", Winkelmandje.getWINKELMANDJE());
+        map.addAttribute("totaalprijs",Winkelmandje.bepaalTotaalPrijs());
         return "bestellingen";
     }
 
@@ -36,7 +38,7 @@ public class BestellingController {
 
     }
 
-    @RequestMapping(value = "/bestellingen/remove/{id}")
+    @RequestMapping(value = "/bestellingen/remove/{id}", method = RequestMethod.GET)
     public String removeFromWinkelmandje (@PathVariable(value = "id")int id){
         DierenProduct dProduct= dao.findById(id).get();
         Winkelmandje.removeFromWinkelmandje(dProduct);
