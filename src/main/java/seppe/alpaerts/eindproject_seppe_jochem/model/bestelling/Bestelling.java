@@ -16,13 +16,13 @@ public class Bestelling {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank
+    @NotBlank(message = "Allé allé iedereen heeft een naam, dus ook jij!")
     private String naam;
-    @NotBlank
+    @NotBlank(message = "Allé allé iedereen heeft een achternaam, dus ook jij!")
     private String voornaam;
-    @NotBlank
+    @NotBlank(message = "Allé allé iedereen heeft een e-mail adres, dus ook jij!")
     private String email;
-    @NotBlank
+    @NotBlank(message = "Ik hoop dat je niet dakloos bent!")
     private String adres;
     private String telnr;
 

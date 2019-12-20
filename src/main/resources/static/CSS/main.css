@@ -171,6 +171,9 @@ h3 {
 
 /* style Footer*/
 p2 {
+    border-top-style: solid;
+    border-top-color: #291407;
+    border-top-width: 1px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -203,4 +206,17 @@ p2 {
 }
 tr {
     text-align: right;
+}
+
+
+
+
+
+
+/* error message*/
+.error {
+    color: red;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: monospace;
 }
