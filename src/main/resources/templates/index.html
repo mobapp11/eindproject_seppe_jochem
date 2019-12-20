@@ -25,14 +25,23 @@
 
 
 </head>
+<!-- Author: Jochem
+            - logo toegevoegd in linker boven hoek die werk als home button
+            - dieren banner tegevoegd met bedrijfslogo die achter de navigatiebalk verdwijnt als men scrolled
+            - added footers op alle paginas
+            - heb gekozen voor cards als product weergave, met de extra optie om de beschrijving teks scrollable
+              temaken indien die telang is voor het tekstveld
+            - css stijl doorgetrokken zoals alle andere paginas
+-->
 
 <body>
-
-
+<!--de navigatiebar-->
 <nav th:replace="~{menu::nav_menu(Home)}"></nav>
 
-
+<!--banner met logo van bedrijf-->
 <img class="banner" th:src="@{~/media/banner.png}">
+
+<!--de productcards-->
 <div class="container-fluid">
     <div class="col-xs-4 padding-0">
         <div class="row no-gutters">
@@ -50,6 +59,8 @@
         </div>
     </div>
 </div>
+
+<!--de footer-->
 <footer>
     <p2>&copy; Time & Jerry - Seppe & Jochem</p2>
 </footer>

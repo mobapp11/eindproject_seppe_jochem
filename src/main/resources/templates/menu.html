@@ -5,6 +5,12 @@
 <div class="container-fluid">
 <nav th:fragment="nav_menu(page)" id="nav_menu">
 
+    <!-- Author: Jochem
+            - navigatoe balk met categorie dropdown
+            - bedrijfslogo werkt als homebutton
+            - css stijl doorgetrokken zoals alle andere paginas
+-->
+
     <ul>
         <li><a th:href="@{~/}"><img class="toplogo" th:src="@{~/media/tntlogo.jpg}"></a></li>
         <li><a th:href="@{~/}"> Categoriën</a>
