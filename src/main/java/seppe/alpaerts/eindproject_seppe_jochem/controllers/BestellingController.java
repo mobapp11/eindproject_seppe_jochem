@@ -53,6 +53,10 @@ public class BestellingController {
 
     }
 
+    /** to delete dierenproduct from winkelmandje, find product by id -> remove product from winkel
+     *
+     */
+
     @RequestMapping(value = "/bestellingen/remove/{id}", method = RequestMethod.GET)
     public String removeFromWinkelmandje(@PathVariable(value = "id") int id) {
         DierenProduct dProduct = dao.findById(id).get();

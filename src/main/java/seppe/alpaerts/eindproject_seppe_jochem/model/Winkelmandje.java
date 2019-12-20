@@ -17,11 +17,18 @@ public class Winkelmandje {
     public Winkelmandje() {
     }
 
+    /** Author: Seppe
+     * add to winkelmandje, wanneer je product toevoegt, maakt hij nieuwe rij met aantal 1
+     */
 
     public static void addToWinkelmandje(DierenProduct dProduct) {
         WINKELMANDJE.add(new Rij(dProduct, 1));
     }
 
+    /** Author: Seppe
+     * Geschreven bij consultatie van David
+     *
+     */
     public static void removeFromWinkelmandje(DierenProduct dProduct) {
         Rij toRemove = null;
         for (Rij r : WINKELMANDJE) {
@@ -32,9 +39,9 @@ public class Winkelmandje {
         WINKELMANDJE.remove(toRemove);
     }
 
-    public static void deleteRij(Rij product) {
-        WINKELMANDJE.remove(product);
-    }
+    /** Author: Seppe
+     * om totaalprijs te bepalen, for loop waarbij elke rij zijn prijs optelt bij de totaalprijs
+     */
 
 
     public static BigDecimal bepaalTotaalPrijs() {
