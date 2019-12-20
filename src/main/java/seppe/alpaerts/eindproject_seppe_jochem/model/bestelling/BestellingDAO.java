@@ -1,8 +1,9 @@
-package seppe.alpaerts.eindproject_seppe_jochem.model;
+package seppe.alpaerts.eindproject_seppe_jochem.model.bestelling;
 
 import org.springframework.data.repository.CrudRepository;
 
-/** Author:Seppe
+/**
+ * Author:Seppe
  * dao gemaakt om evt bestellingen te kunnen saven, maar niet toegepast
  */
 

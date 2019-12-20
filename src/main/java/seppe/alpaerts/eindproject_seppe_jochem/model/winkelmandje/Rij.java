@@ -1,6 +1,9 @@
-package seppe.alpaerts.eindproject_seppe_jochem.model;
+package seppe.alpaerts.eindproject_seppe_jochem.model.winkelmandje;
 
-/** Autor: Seppe
+import seppe.alpaerts.eindproject_seppe_jochem.model.product.DierenProduct;
+
+/**
+ * Autor: Seppe
  * klasse om een bepaalde rij te maken in het winkelmandje
  */
 

@@ -1,4 +1,4 @@
-package seppe.alpaerts.eindproject_seppe_jochem.model;
+package seppe.alpaerts.eindproject_seppe_jochem.model.bestelling;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
-/** Author: Seppe Alpaerts
+/**
+ * Author: Seppe Alpaerts
  * Made class for bestelling, to make a form
  */
 

@@ -1,12 +1,13 @@
-package seppe.alpaerts.eindproject_seppe_jochem.model;
+package seppe.alpaerts.eindproject_seppe_jochem.model.winkelmandje;
 
-import javax.persistence.Entity;
+import seppe.alpaerts.eindproject_seppe_jochem.model.product.DierenProduct;
+
 import java.math.BigDecimal;
 import java.util.HashSet;
-import java.util.Set;
 
-/** Author: Seppe
- *  Created winkelmandje om weer te geven op bestellingpagina, dit is een lijst van alle producten die worden toegevoegd via index pagina
+/**
+ * Author: Seppe
+ * Created winkelmandje om weer te geven op bestellingpagina, dit is een lijst van alle producten die worden toegevoegd via index pagina
  */
 
 public class Winkelmandje {
@@ -17,7 +18,8 @@ public class Winkelmandje {
     public Winkelmandje() {
     }
 
-    /** Author: Seppe
+    /**
+     * Author: Seppe
      * add to winkelmandje, wanneer je product toevoegt, maakt hij nieuwe rij met aantal 1
      */
 
@@ -25,21 +27,22 @@ public class Winkelmandje {
         WINKELMANDJE.add(new Rij(dProduct, 1));
     }
 
-    /** Author: Seppe
+    /**
+     * Author: Seppe
      * Geschreven bij consultatie van David
-     *
      */
     public static void removeFromWinkelmandje(DierenProduct dProduct) {
         Rij toRemove = null;
         for (Rij r : WINKELMANDJE) {
-            if(r.getDierenProduct().equals(dProduct) ){
+            if (r.getDierenProduct().equals(dProduct)) {
                 toRemove = r;
             }
         }
         WINKELMANDJE.remove(toRemove);
     }
 
-    /** Author: Seppe
+    /**
+     * Author: Seppe
      * om totaalprijs te bepalen, for loop waarbij elke rij zijn prijs optelt bij de totaalprijs
      */
 

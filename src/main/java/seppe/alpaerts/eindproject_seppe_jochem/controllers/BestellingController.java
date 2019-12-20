@@ -5,11 +5,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import seppe.alpaerts.eindproject_seppe_jochem.model.*;
+import seppe.alpaerts.eindproject_seppe_jochem.model.bestelling.Bestelling;
+import seppe.alpaerts.eindproject_seppe_jochem.model.product.DierenProduct;
+import seppe.alpaerts.eindproject_seppe_jochem.model.product.ProductDAO;
+import seppe.alpaerts.eindproject_seppe_jochem.model.winkelmandje.Winkelmandje;
 
 import javax.validation.Valid;
 
-/**Author Seppe
+/**
+ * Author Seppe
  **/
 
 @Controller
@@ -20,7 +24,6 @@ public class BestellingController {
 
     /**
      * Modelattribute to make new bestelling
-     *
      */
 
     @ModelAttribute(value = "nBestelling")
@@ -28,8 +31,8 @@ public class BestellingController {
         return new Bestelling();
     }
 
-    /** get alle rijen winkelmandje, totaalprijs, created in class Winkelmandje
-     *
+    /**
+     * get alle rijen winkelmandje, totaalprijs, created in class Winkelmandje
      */
 
     @GetMapping(value = "/bestellingen")
@@ -39,10 +42,9 @@ public class BestellingController {
         return "bestellingen";
     }
 
-    /** to add Dierenproduct to winkelmandje
-     *
+    /**
+     * to add Dierenproduct to winkelmandje
      */
-
 
 
     @GetMapping(value = "/bestellingen/add/{id}")
@@ -53,8 +55,8 @@ public class BestellingController {
 
     }
 
-    /** to delete dierenproduct from winkelmandje, find product by id -> remove product from winkel
-     *
+    /**
+     * to delete dierenproduct from winkelmandje, find product by id -> remove product from winkel
      */
 
     @RequestMapping(value = "/bestellingen/remove/{id}", method = RequestMethod.GET)
@@ -65,8 +67,8 @@ public class BestellingController {
 
     }
 
-    /**to post the bestelling, return What's missing or return 'bedankt' page
-     *
+    /**
+     * to post the bestelling, return What's missing or return 'bedankt' page
      */
 
 

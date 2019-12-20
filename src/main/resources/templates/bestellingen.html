@@ -31,7 +31,9 @@
     <title>Winkelmandje</title>
 </head>
 <body>
-
+<!-- author: Seppe
+    created WinkelmandjeTable with button to delete products, tablerow with total amount
+    -->
 <nav th:replace="~{menu::nav_menu(Bestellingen)}"></nav>
 <div class="formplustable">
     <div class="container-fluid">
@@ -69,7 +71,8 @@
             </table>
         </div>
     </div>
-
+<!-- author: Seppe
+    created form to make a bestelling, gives errors where the field is empty-->
     <div class="container-fluid">
         <div class="contactgegevens">
             <form th:action="@{~/bestellingen}" method="post" th:object="${nBestelling}">
@@ -104,7 +107,7 @@
                     <span th:if="${#fields.hasErrors('telnr')}" th:errors="*{telnr}" class="error"></span>
                 </div>
 
-                <input value="Bestel nu!"  class="btn btn-primary bestelknop" type="submit">
+                <input value="Bestel nu!" class="btn btn-primary bestelknop" type="submit">
 
             </form>
         </div>

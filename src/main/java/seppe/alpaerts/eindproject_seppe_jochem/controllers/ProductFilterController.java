@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import seppe.alpaerts.eindproject_seppe_jochem.model.DierenProduct;
-import seppe.alpaerts.eindproject_seppe_jochem.model.ProductDAO;
+import seppe.alpaerts.eindproject_seppe_jochem.model.product.DierenProduct;
+import seppe.alpaerts.eindproject_seppe_jochem.model.product.ProductDAO;
 
 /** Author: jochem ( met hulp van David aka swasse )
  * zorgt voor het filtern op categorie bij de dropdown menu
