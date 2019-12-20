@@ -1,21 +1,35 @@
-h2{
-    padding: 85px;
+header{
+    padding-left: 85px;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
 }
-.banner{
+h2 {
+    padding: 105px;
+}
+h4{
+    position: fixed;
+    padding-left: 100px;
+    bottom: 40px;
+}
+
+.banner {
     margin-top: 73px;
-    padding-top: 5px!important;
+    padding-top: 5px !important;
     width: 100%;
-    background:linear-gradient( 180deg,#e6944a,white );
+    background: linear-gradient(180deg, #e6944a, white);
     vertical-align: baseline;
 
 }
-.bestellingpagina{
+
+.bestellingpagina {
     padding-top: 73px;
 }
-nav{
+
+nav {
     display: inline-block;
-    margin: 0!important;
-    padding: 0!important;
+    margin: 0 !important;
+    padding: 0 !important;
     width: 100%;
     height: 73px;
     background-color: #e6944a;
@@ -27,6 +41,7 @@ nav ul {
     padding-left: 5px;
     float: left;
 }
+
 nav ul li a img {
     display: inline-block;
     padding-left: -500px;
@@ -49,7 +64,7 @@ nav ul li a {
     font-size: 20px;
     text-align: center;
     padding-top: 4px;
-    padding-right:  15px;
+    padding-right: 15px;
     text-decoration: none !important;
     list-style: none;
 }
@@ -60,14 +75,17 @@ nav ul li ul {
     position: absolute;
     background-color: #e6944a !important;
 }
-nav ul li:hover ul{
+
+nav ul li:hover ul {
     display: block;
 }
+
 nav ul li ul li {
 
     text-align: left !important;
     width: 100px;
 }
+
 nav ul li ul li a {
     text-align: left;
     float: left;
@@ -75,15 +93,20 @@ nav ul li ul li a {
     text-decoration: none;
     position: relative;
 }
+.winkelmandknop{
+    text-align: right;
+    color: beige;
+}
 
 .row {
     width: 100%;
+    padding-left: 100px;
 }
 
 h3 {
     font-size: 14px !important;
-    font-weight: bold!important ;
-    font-family: monospace ;
+    font-weight: bold !important;
+    font-family: monospace;
     text-align: center;
     color: #291407;
 
@@ -97,6 +120,10 @@ h3 {
     width: 250px;
     height: 400px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    flex-grow: 0 !important;
 }
 
 .card-img-top {
@@ -128,21 +155,13 @@ h3 {
     border-color: black !important;
 
 }
-.bestelknop{
 
-}
 
 .btn-primary:hover {
     background-color: #e67d1d !important;
 }
 
-.klantgegevens {
-    margin-top: 50px;
-    width: 500px;
-    margin-left: 25px;
-}
-
-p2{
+p2 {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -153,21 +172,28 @@ p2{
     text-align: center;
     font-size: small;
 }
-.formplustable{
+
+.formplustable {
+    width: 40%;
     display: inline-block;
     position: fixed;
+    padding-left: 100px;
 }
-.contactgegevens{
+
+.contactgegevens {
+    top: 250px;
     position: fixed;
     margin-top: -120px;
-    margin-right: 50px;
+    padding-right:200px;
     right: 0;
     width: 40%;
 }
-.bestellingpagina{
+
+.bestellingpagina {
     padding-top: 120px;
     margin-left: 50px;
 }
-tr{
-    text-align: right ;
+
+tr {
+    text-align: right;
 }

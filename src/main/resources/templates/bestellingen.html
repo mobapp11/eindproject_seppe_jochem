@@ -50,7 +50,8 @@
                     <td th:text="*{dProduct.dierenProduct.getProductnaam()}"></td>
                     <td th:text="*{dProduct.getAantal()}"></td>
                     <td th:text="'€' + *{dProduct.dierenProduct.getPrijs()}"></td>
-                    <td><a th:href="@{~/bestellingen/remove/{id}(id = ${dProduct.dierenProduct.id})}">Delete</a></td>
+                    <td><a class="btn btn-primary bestelknop"
+                           th:href="@{~/bestellingen/remove/{id}(id = ${dProduct.dierenProduct.id})}">Delete</a></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -98,7 +99,7 @@
                     <span th:if="${#fields.hasErrors('telnr')}" th:errors="*{telnr}" class="error"></span>
                 </div>
 
-                <input class="btn btn-primary bestelknop" type="submit">
+                <input value="Bestel nu!"  class="btn btn-primary bestelknop" type="submit">
 
             </form>
         </div>
