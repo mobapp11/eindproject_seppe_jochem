@@ -23,7 +23,13 @@ public class Winkelmandje {
     }
 
     public static void removeFromWinkelmandje(DierenProduct dProduct) {
-        WINKELMANDJE.remove(new Rij(dProduct, 1));
+        Rij toRemove = null;
+        for (Rij r : WINKELMANDJE) {
+            if(r.getDierenProduct().equals(dProduct) ){
+                toRemove = r;
+            }
+        }
+        WINKELMANDJE.remove(toRemove);
     }
 
     public static void deleteRij(Rij product) {
